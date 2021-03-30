@@ -271,5 +271,13 @@ opacity: 0.9;
     .hamburger{
       display: block;
     }
-    
+ }
+
+@media screen and (max-width: 430px) {
+    .big{
+        
+        background-size: 900px;
+        background-position-x: -290px ;
+        background-position-y: 350px;
     }
+}
