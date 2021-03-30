@@ -1,0 +1,275 @@
+html,body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+ 
+}
+
+/* Header */
+
+header{ 
+    margin: 0px 0px;
+    position: relative;
+    padding: 5px 0px;
+    height: 50px;
+}
+
+nav{
+margin: 0;
+padding-top: 2px;
+padding:0px 0px;
+}
+
+.nav-ul{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    padding: 0;
+    list-style-type: none;
+    }
+
+nav li{
+    display: inline-block;
+    padding: 10px 0px;
+}
+
+.nav-a{
+    color: #fff;
+    font-family: 'Verdana', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0px;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.nav-a:hover{
+    border-bottom: solid 3px rgb(92, 43, 226);
+    opacity: 1;
+}
+
+#insta{
+position: absolute;
+bottom: 0;
+}
+
+#insta:hover{
+opacity: 1;
+border: none;  
+position: absolute;
+bottom: 0;  
+}
+
+.hamburger{
+    background-color: transparent;
+    border: 0;
+    color:white;
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+  }
+  
+  .hamburger:focus{
+  outline: none;
+  }
+
+/* Main Section */
+
+.big{
+    height: 535px;
+    border-radius: 5px solid white;
+    margin: 5px;
+    background-image: url('Attachments/ben-sweet-2LowviVHZ-E-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: 1200px;
+    background-position-x: 100px ;
+    background-position-y: 0px;
+    visibility: initial;
+}
+
+.row{
+    display: flex;
+}
+
+/* Container 1 */
+
+.row #container1{
+    height: 535px;
+    width: 500px;
+    margin-left: 5px;
+}
+
+/* Container 2 */
+
+.row #container2{
+    height: 370px;
+    width: 400px;
+    margin-top: 150px;
+}
+/* Container 3 */
+
+.row #container3{
+    height: 535px;
+    width: 600px;
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+.row #container3 ul{
+    margin-top: 140px;
+    padding-left: 0px;
+
+}
+
+.row #container3 li{     
+list-style-type: none;
+    text-align: left;
+}
+
+.row #container3 a{
+color: white;
+font-size: 40px;
+font-weight: bold;
+text-decoration: none;
+font-family: 'Comfortaa', cursive;
+opacity: 0.5;
+}
+
+.row #container3 a:hover{
+opacity: 0.9;
+}
+
+.row #container3 #option1{
+    margin-left: 20px;
+}
+
+.row #container3 #option1:hover{
+    color: lightseagreen;
+}
+
+.row #container3 #option2{
+    margin-left: 54px;
+}
+
+.row #container3 #option2:hover{
+    color: rgb(250, 189, 110);
+}
+.row #container3 #option3{
+    margin-left: 75px;
+}
+
+.row #container3 #option3:hover{
+    color: lightgreen;
+}
+.row #container3 #option4{
+    margin-left: 88px;
+}
+
+.row #container3 #option4:hover{
+    color: lightpink;
+}
+
+
+/* Responsive Settings */
+
+/* Tablet view */
+@media screen and (max-width: 1363px) {
+    .row #container1{
+    display: none;  
+    }
+    
+    /* Container 2 */
+    
+    .row #container2{
+    display: none;
+    }
+
+
+}
+
+/* In Between Size (For Background Transition) */
+@media screen and (max-width: 920px) {
+    .big{
+        
+        background-size: 1000px;
+        background-position-x: 100px ;
+        background-position-y: 0px;
+    }
+}
+
+
+/* Mobile view */
+@media screen and (max-width: 800px) {
+
+    .big{
+        height: 800px;
+        background-size: 1000px;
+        background-position-x: -260px ;
+        background-position-y: 280px;
+    }
+
+    .big.show{
+        visibility: hidden;
+         
+    }
+
+    .nav-ul{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    }
+    
+    .nav-ul.show{
+    display: flex;
+    /* Paddings sind die schwarze Menuflache */
+    padding-bottom: 200px ;
+    padding-top: 50px;
+    justify-content: space-between;
+    text-align: center;
+
+    }
+    
+    .nav-a.show{
+        
+        font-size: 35px;
+        padding: 10px 20px;
+        margin: 13px 0;
+        text-align: center;
+        opacity: 0.5;
+    }
+
+    .nav-a:hover{
+        opacity: 1;
+        border-bottom: none;
+    }
+    
+    #mobileicon{
+        transition: .3s all; 
+
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    
+    }
+
+    #mobileicon.show{
+        transition: .3s all; 
+
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    
+    }
+
+
+    .hamburger{
+      display: block;
+    }
+    
+    }
